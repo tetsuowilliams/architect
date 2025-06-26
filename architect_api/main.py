@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 import uvicorn
-from app.routes import hello
 from app.routes import blackboard_api
 
 app = FastAPI(
@@ -10,7 +9,6 @@ app = FastAPI(
 )
 
 # Include routers
-app.include_router(hello.router, prefix="/api/v1")
 app.include_router(blackboard_api.router, prefix="/api/v1")
 
 @app.get("/")

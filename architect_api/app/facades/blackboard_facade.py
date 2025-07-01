@@ -16,6 +16,7 @@ class BlackboardFacade:
     def add_blackboard(self, blackboard_schema: BlackboardSchema) -> BlackboardSchema:
         blackboard_model = BlackboardModel(
             id=blackboard_schema.id,
+            title=blackboard_schema.title,
             content=blackboard_schema.content
         )
         
